@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "settings": {
+      "react": {
+          "version": "detect"
+      }
+  },
+  "env": {
+      "browser": true,
+      "jest": true,
+      "node": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:testing-library/react",
+      "plugin:jest-dom/recommended",
+      "prettier",
+      "next"
+  ],
+  "plugins": [
+      "react",
+      "jsx-a11y",
+      "prettier"
+  ],
+  "rules": {
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off", // not necessary anymore for react 17,
+      "import/no-anonymous-default-export": "off" // This was appearing in styled components exporting default all components :D
+  }
 }
